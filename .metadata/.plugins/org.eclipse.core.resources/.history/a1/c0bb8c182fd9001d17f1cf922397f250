@@ -1,0 +1,20 @@
+package practice;
+
+public class qn2 {
+	public static void  median(int a[],int l) {
+		
+		if(l%2==0) {
+			System.out.println(a[l/2]);
+		}
+			
+	}
+
+	public static void main(String[] args) {
+		int [] arr= {1,2,3,4};
+		int l=arr.length;
+		median(arr,l);
+	
+
+	}
+
+}

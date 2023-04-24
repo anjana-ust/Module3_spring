@@ -1,0 +1,18 @@
+package com.ust.javaconfic;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.ust.javaconfic.HelloWorldImpl.Appconfig;
+
+public class TestBean {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ApplicationContext ctxt = new AnnotationConfigApplicationContext(Appconfig.class);
+		HelloWorld hello = (HelloWorld) ctxt.getBean("helloBean");
+		System.out.println(( hello).message());
+	}
+
+}

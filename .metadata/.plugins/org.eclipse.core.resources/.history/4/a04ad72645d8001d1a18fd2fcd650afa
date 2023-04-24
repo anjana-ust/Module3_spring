@@ -1,0 +1,8 @@
+package com.ust.javaconfic;
+
+public class HelloWorldImpl implements HelloWorld {
+	public String message() {
+		return "This is first java coniguration";
+	}
+
+}

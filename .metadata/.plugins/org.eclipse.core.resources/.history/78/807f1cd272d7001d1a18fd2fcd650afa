@@ -1,0 +1,29 @@
+package com.ust.ioc;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.FileSystemResource;
+
+public class TestLogin {
+	
+	public static void main(String[] args) {
+		
+	
+
+	/*Login  login = new Login();
+    login.setUserName("johndoe");
+    login.setPassword("winnyminny");
+    String result =login.validate();
+    System.out.println(result);*/
+    
+		
+		// object oriented programming is pull based approach
+    // A class need to create instances on which it depends
+    //spring ioc is based on push approach 
+    //objects required by a class are injected with the help of configuration file
+		BeanFactory factory = new XmlBeanFactory(new FileSystemResource("beans.xml"));
+		Object obj = factory.getBean("connection");
+		System.out.println(obj);
+    
+	}
+}
